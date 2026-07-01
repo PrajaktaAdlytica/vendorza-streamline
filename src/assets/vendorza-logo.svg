@@ -1,0 +1,31 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Vendorza Logo</title>
+  <desc id="desc">Vendorza wordmark with abstract V monogram in navy and teal.</desc>
+
+  <rect width="1200" height="320" rx="32" fill="#F8FAFC"/>
+
+  <!-- Icon -->
+  <g transform="translate(88 62)">
+    <!-- Outer V left stroke -->
+    <path d="M20 0H76L132 132L104 196L20 0Z" fill="#0B1220"/>
+    <!-- Outer V right stroke -->
+    <path d="M236 0H180L124 132L152 196L236 0Z" fill="#14B8A6"/>
+    <!-- Lower vertex -->
+    <path d="M104 196H152L128 252L104 196Z" fill="#0B1220"/>
+    <!-- Inner document/check negative-style cutouts -->
+    <path d="M75 42H112L140 107L121 151L75 42Z" fill="#F8FAFC"/>
+    <path d="M181 42H144L116 107L135 151L181 42Z" fill="#F8FAFC"/>
+    <!-- Governance/check accent -->
+    <path d="M87 131L111 154L166 91" stroke="#14B8A6" stroke-width="18" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g fill="#0B1220">
+    <text x="398" y="199" font-family="Inter, Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="104" font-weight="750" letter-spacing="-5">
+      Vendorza
+    </text>
+  </g>
+
+  <!-- Small premium detail dot -->
+  <circle cx="1072" cy="188" r="7" fill="#14B8A6"/>
+</svg>

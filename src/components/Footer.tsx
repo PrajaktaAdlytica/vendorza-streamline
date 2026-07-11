@@ -6,9 +6,9 @@ const cols = [
   {
     title: "Product",
     links: [
-      { label: "Vendorza Onboard", to: "/products/onboard" },
-      { label: "Vendorza Risk", to: "/products/risk" },
-      { label: "Vendorza Renew", to: "/products/renew" },
+      { label: "VendorXa Onboard", to: "/products/onboard" },
+      { label: "VendorXa Risk", to: "/products/risk" },
+      { label: "VendorXa Renew", to: "/products/renew" },
     ],
   },
   {
@@ -73,7 +73,7 @@ export function Footer() {
           ))}
         </div>
         <div className="mt-14 pt-6 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-muted-foreground">
-          <div>© 2026 Vendorza sp. z o.o. — vendorza.io</div>
+          <div>© 2026 VendorXa sp. z o.o. — vendorxa.com</div>
           <div>Warsaw · Amsterdam · London</div>
         </div>
       </div>

@@ -1,0 +1,17 @@
+<svg width="1200" height="320" viewBox="0 0 1200 320" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">VendorXa Logo</title>
+  <desc id="desc">VendorXa wordmark with a vendor lifecycle dossier mark: connected onboarding, risk, compliance, and renewal checkpoints.</desc>
+  <rect width="1200" height="320" rx="32" fill="#F8FAFC"/>
+  <g transform="translate(86 58)">
+    <rect x="0" y="0" width="204" height="204" rx="46" fill="#0B1220"/>
+    <path d="M54 58C54 51.373 59.373 46 66 46H116C122.627 46 128 51.373 128 58V108C128 114.627 122.627 120 116 120H66C59.373 120 54 114.627 54 108V58Z" fill="#F8FAFC"/>
+    <path d="M82 86C82 79.373 87.373 74 94 74H144C150.627 74 156 79.373 156 86V136C156 142.627 150.627 148 144 148H94C87.373 148 82 142.627 82 136V86Z" fill="#14B8A6"/>
+    <path d="M61 61L143 143M143 61L61 143" stroke="#0B1220" stroke-width="11" stroke-linecap="round"/>
+    <path d="M60 62L96 98M144 142L108 106" stroke="#F8FAFC" stroke-width="11" stroke-linecap="round"/>
+    <circle cx="62" cy="62" r="14" fill="#F8FAFC" stroke="#0B1220" stroke-width="8"/>
+    <circle cx="142" cy="62" r="14" fill="#F8FAFC" stroke="#0B1220" stroke-width="8"/>
+    <circle cx="62" cy="142" r="14" fill="#F8FAFC" stroke="#0B1220" stroke-width="8"/>
+    <circle cx="142" cy="142" r="14" fill="#14B8A6" stroke="#0B1220" stroke-width="8"/>
+  </g>
+  <text x="366" y="190" fill="#0B1220" font-family="Inter, Avenir Next, Helvetica Neue, Arial, sans-serif" font-size="104" font-weight="750" letter-spacing="-5">VendorXa</text>
+</svg>

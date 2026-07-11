@@ -45,7 +45,7 @@
 :root {
   --radius: 0.75rem;
 
-  /* Vendorza palette */
+  /* VendorXa palette */
   --background: oklch(0.985 0.005 240);          /* #F8FAFC */
   --foreground: oklch(0.16 0.04 265);            /* #0B1220 */
   --surface: oklch(1 0 0);

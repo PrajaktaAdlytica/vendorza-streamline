@@ -74,7 +74,7 @@ export function ProductPage(p: ProductPageProps) {
                 Real outcomes for real teams.
               </h3>
               <p className="mt-4 text-[15px] text-muted-foreground leading-relaxed max-w-md">
-                Vendorza combines structure, automation and visibility so every stakeholder — from procurement to security — moves forward together.
+                VendorXa combines structure, automation and visibility so every stakeholder — from procurement to security — moves forward together.
               </p>
             </div>
             <ul className="grid sm:grid-cols-2 gap-3">

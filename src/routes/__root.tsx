@@ -69,8 +69,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
-const TITLE = "Vendorza — Vendor Governance. Finally in One Place.";
-const DESC = "Vendorza centralises vendor onboarding, third-party risk and contract renewals into one intelligent workspace for procurement, legal, finance and security teams.";
+const TITLE = "VendorXa — Vendor Lifecycle Governance. Finally in One Place.";
+const DESC = "VendorXa centralises vendor onboarding, third-party risk and contract renewals into one intelligent workspace for procurement, legal, finance and security teams.";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
@@ -79,26 +79,26 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: TITLE },
       { name: "description", content: DESC },
-      { name: "author", content: "Vendorza" },
+      { name: "author", content: "VendorXa" },
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESC },
       { property: "og:type", content: "website" },
-      { property: "og:site_name", content: "Vendorza" },
+      { property: "og:site_name", content: "VendorXa" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: TITLE },
       { name: "twitter:description", content: DESC },
-      { title: "Lovable App" },
-      { property: "og:title", content: "Lovable App" },
-      { name: "twitter:title", content: "Lovable App" },
-      { name: "description", content: "Vendorza centralizes vendor onboarding, risk, and renewals into one intelligent workspace." },
-      { property: "og:description", content: "Vendorza centralizes vendor onboarding, risk, and renewals into one intelligent workspace." },
-      { name: "twitter:description", content: "Vendorza centralizes vendor onboarding, risk, and renewals into one intelligent workspace." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/44dcf650-7c4b-4c29-85be-911a47318042/id-preview-5cfb686b--27ab6a03-5bc4-4c53-a1b1-8c0459e32409.lovable.app-1782916004308.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/44dcf650-7c4b-4c29-85be-911a47318042/id-preview-5cfb686b--27ab6a03-5bc4-4c53-a1b1-8c0459e32409.lovable.app-1782916004308.png" },
+      { title: "VendorXa" },
+      { property: "og:title", content: "VendorXa" },
+      { name: "twitter:title", content: "VendorXa" },
+      { name: "description", content: "VendorXa centralizes vendor onboarding, risk, and renewals into one intelligent workspace." },
+      { property: "og:description", content: "VendorXa centralizes vendor onboarding, risk, and renewals into one intelligent workspace." },
+      { name: "twitter:description", content: "VendorXa centralizes vendor onboarding, risk, and renewals into one intelligent workspace." },
+      { property: "og:image", content: "https://vendorza-streamline.vercel.app/favicon.svg?v=vendorxa" },
+      { name: "twitter:image", content: "https://vendorza-streamline.vercel.app/favicon.svg?v=vendorxa" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
-      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
+      { rel: "icon", href: "/favicon.svg?v=vendorxa", type: "image/svg+xml" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

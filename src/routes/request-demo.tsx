@@ -8,8 +8,8 @@ import { motion } from "motion/react";
 export const Route = createFileRoute("/request-demo")({
   head: () => ({
     meta: [
-      { title: "Request a Demo — Vendorza" },
-      { name: "description", content: "See how Vendorza can help your teams onboard, assess and manage vendors with confidence." },
+      { title: "Request a Demo — VendorXa" },
+      { name: "description", content: "See how VendorXa can help your teams onboard, assess and manage vendors with confidence." },
     ],
   }),
   component: RequestDemo,
@@ -37,7 +37,7 @@ function RequestDemo() {
         </Link>
         <div className="relative mt-auto max-w-md">
           <h2 className="text-4xl font-semibold tracking-tight text-balance leading-[1.05]">
-            See <span className="font-editorial text-accent">Vendorza</span> in action.
+            See <span className="font-editorial text-accent">VendorXa</span> in action.
           </h2>
           <p className="mt-4 text-sm text-primary-foreground/70">
             Walk through onboarding, risk and renewals — mapped to how your teams work today.
@@ -106,7 +106,7 @@ function RequestDemo() {
                 Request Demo <ArrowRight className="h-4 w-4" />
               </Button>
               <p className="text-[11px] text-muted-foreground text-center">
-                By submitting, you agree to Vendorza processing your data as described in our Privacy Policy.
+                By submitting, you agree to VendorXa processing your data as described in our Privacy Policy.
               </p>
             </form>
           )}

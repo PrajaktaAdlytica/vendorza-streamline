@@ -6,9 +6,9 @@ import { ButtonLink } from "./Button";
 import { cn } from "@/lib/utils";
 
 const products = [
-  { to: "/products/onboard", name: "Vendorza Onboard", desc: "Structured vendor onboarding" },
-  { to: "/products/risk", name: "Vendorza Risk", desc: "Continuous third-party monitoring" },
-  { to: "/products/renew", name: "Vendorza Renew", desc: "Renewal & contract lifecycle" },
+  { to: "/products/onboard", name: "VendorXa Onboard", desc: "Structured vendor onboarding" },
+  { to: "/products/risk", name: "VendorXa Risk", desc: "Continuous third-party monitoring" },
+  { to: "/products/renew", name: "VendorXa Renew", desc: "Renewal & contract lifecycle" },
 ];
 
 export function Navbar() {

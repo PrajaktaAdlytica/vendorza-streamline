@@ -7,9 +7,9 @@ import { Check } from "lucide-react";
 export const Route = createFileRoute("/products/onboard")({
   head: () => ({
     meta: [
-      { title: "Vendorza Onboard — Structured vendor onboarding" },
+      { title: "VendorXa Onboard — Structured vendor onboarding" },
       { name: "description", content: "Accelerate vendor onboarding with intelligent intake, document collection and multi-team approvals." },
-      { property: "og:title", content: "Vendorza Onboard — Structured vendor onboarding" },
+      { property: "og:title", content: "VendorXa Onboard — Structured vendor onboarding" },
       { property: "og:description", content: "Accelerate vendor onboarding with intelligent intake, document collection and multi-team approvals." },
     ],
   }),
@@ -20,7 +20,7 @@ export const Route = createFileRoute("/products/onboard")({
       accentText="text-emerald-600"
       title="Vendor Onboarding."
       editorial="Structured."
-      description="Replace scattered intake forms and email chains with intelligent, auditable workflows. Vendorza Onboard collects the right documents, from the right vendor, at the right time."
+      description="Replace scattered intake forms and email chains with intelligent, auditable workflows. VendorXa Onboard collects the right documents, from the right vendor, at the right time."
       rightPanel={<OnboardChecklist />}
       features={[
         { icon: <ClipboardList className="h-5 w-5" />, t: "Intelligent intake", d: "Dynamic forms that adapt to vendor type, tier and jurisdiction." },

@@ -8,8 +8,8 @@ import { motion } from "motion/react";
 export const Route = createFileRoute("/signin")({
   head: () => ({
     meta: [
-      { title: "Sign In — Vendorza" },
-      { name: "description", content: "Sign in to your Vendorza workspace." },
+      { title: "Sign In — VendorXa" },
+      { name: "description", content: "Sign in to your VendorXa workspace." },
     ],
   }),
   component: SignIn,
@@ -31,7 +31,7 @@ function SignIn() {
         </Link>
         <div className="relative mt-auto max-w-md">
           <h2 className="text-4xl font-semibold tracking-tight text-balance leading-[1.05]">
-            Sign in to your <span className="font-editorial text-accent">Vendorza</span> workspace.
+            Sign in to your <span className="font-editorial text-accent">VendorXa</span> workspace.
           </h2>
           <p className="mt-4 text-sm text-primary-foreground/70">
             Vendor governance for procurement, legal, finance and security teams — unified in one intelligent platform.
@@ -78,7 +78,7 @@ function SignIn() {
           </form>
 
           <div className="mt-6 text-center text-sm text-muted-foreground">
-            New to Vendorza?{" "}
+            New to VendorXa?{" "}
             <Link to="/request-demo" className="text-accent hover:text-accent/80 font-medium">Request a demo</Link>
           </div>
         </motion.div>

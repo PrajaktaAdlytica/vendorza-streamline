@@ -6,9 +6,9 @@ import { motion } from "motion/react";
 export const Route = createFileRoute("/products/renew")({
   head: () => ({
     meta: [
-      { title: "Vendorza Renew — Contract renewal management" },
+      { title: "VendorXa Renew — Contract renewal management" },
       { name: "description", content: "Stay ahead of every renewal with a proactive calendar, obligations tracking and approval scheduling." },
-      { property: "og:title", content: "Vendorza Renew — Contract renewal management" },
+      { property: "og:title", content: "VendorXa Renew — Contract renewal management" },
       { property: "og:description", content: "Stay ahead of every renewal with a proactive calendar, obligations tracking and approval scheduling." },
     ],
   }),
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/products/renew")({
       accentText="text-indigo-600"
       title="Contract Renewals."
       editorial="Effortless."
-      description="Never miss a renewal, opt-out window or obligation. Vendorza Renew connects contract data, risk and finance into a single proactive calendar."
+      description="Never miss a renewal, opt-out window or obligation. VendorXa Renew connects contract data, risk and finance into a single proactive calendar."
       rightPanel={<RenewTimeline />}
       features={[
         { icon: <CalendarClock className="h-5 w-5" />, t: "Renewal calendar", d: "A rolling 12-month view of every upcoming renewal and notice window." },
@@ -38,9 +38,9 @@ export const Route = createFileRoute("/products/renew")({
         "Report on portfolio commitments with clarity",
       ]}
       faq={[
-        { q: "Can Vendorza extract terms from our existing contracts?", a: "Yes — Vendorza uses AI-assisted extraction to surface key dates, obligations and clauses for review." },
+        { q: "Can VendorXa extract terms from our existing contracts?", a: "Yes — VendorXa uses AI-assisted extraction to surface key dates, obligations and clauses for review." },
         { q: "How early do we get renewal alerts?", a: "Alert cadences are configurable per vendor tier — many customers use 180/90/30-day cadences." },
-        { q: "Does it integrate with our e-signature tool?", a: "Yes — Vendorza connects with the major e-signature and CLM systems to keep contract data in sync." },
+        { q: "Does it integrate with our e-signature tool?", a: "Yes — VendorXa connects with the major e-signature and CLM systems to keep contract data in sync." },
       ]}
     />
   ),

@@ -16,7 +16,7 @@ import { Check, TrendingDown, ShieldCheck, Layers3 } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Vendorza — Vendor Governance. Finally in One Place." },
+      { title: "VendorXa — Vendor Lifecycle Governance. Finally in One Place." },
       { name: "description", content: "Centralise vendor onboarding, third-party risk and contract renewals into one intelligent workspace." },
     ],
   }),
@@ -33,12 +33,12 @@ function Home() {
             <div>
               <Eyebrow>Vendor Lifecycle Platform</Eyebrow>
               <h1 className="mt-4 text-[44px] sm:text-6xl lg:text-[72px] leading-[0.98] font-semibold text-primary tracking-tight text-balance">
-                Vendor Governance.<br />
+                Vendor Lifecycle Governance.<br />
                 Finally in{" "}
                 <span className="font-editorial text-accent">One Place.</span>
               </h1>
               <p className="mt-6 max-w-lg text-[17px] text-muted-foreground leading-relaxed">
-                Vendorza centralises onboarding, vendor risk and contract renewals into one intelligent workspace for modern organisations.
+                VendorXa centralises onboarding, vendor risk and contract renewals into one intelligent workspace for modern organisations.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <ButtonLink to="/request-demo" variant="primary" size="lg">
@@ -99,7 +99,7 @@ function Home() {
           <ProductCard
             tone="emerald"
             eyebrow="Onboard"
-            title="Vendorza Onboard"
+            title="VendorXa Onboard"
             desc="Accelerate vendor onboarding with structured workflows and automation."
             bullets={["Intelligent intake forms", "Document collection", "Multi-team approvals", "Automated workflows"]}
             to="/products/onboard"
@@ -108,7 +108,7 @@ function Home() {
           <ProductCard
             tone="amber"
             eyebrow="Risk"
-            title="Vendorza Risk"
+            title="VendorXa Risk"
             desc="Continuously assess vendor risk and strengthen your third-party ecosystem."
             bullets={["Risk scoring", "Security monitoring", "Compliance tracking", "ESG & financial insights"]}
             to="/products/risk"
@@ -117,7 +117,7 @@ function Home() {
           <ProductCard
             tone="indigo"
             eyebrow="Renew"
-            title="Vendorza Renew"
+            title="VendorXa Renew"
             desc="Never miss a renewal. Stay ahead of contracts and commitments."
             bullets={["Renewal calendar", "Obligations tracking", "Approval scheduling", "Renewal automation"]}
             to="/products/renew"
@@ -141,7 +141,7 @@ function Home() {
       {/* BENEFITS */}
       <section className="mx-auto max-w-7xl px-6 py-24">
         <SectionHeader
-          eyebrow="Why Vendorza"
+          eyebrow="Why VendorXa"
           title="Built for modern governance teams."
         />
         <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-5">
@@ -200,7 +200,7 @@ function Home() {
         <div className="grid gap-6 lg:grid-cols-3">
           {[
             {
-              q: "Vendorza transformed the way we manage third-party risk. Our teams save hours every week and we have full visibility across the entire vendor lifecycle.",
+              q: "VendorXa transformed the way we manage third-party risk. Our teams save hours every week and we have full visibility across the entire vendor lifecycle.",
               n: "Agnieszka Nowak",
               r: "Head of Procurement",
               c: "Enterprise Retail",
@@ -212,7 +212,7 @@ function Home() {
               c: "Financial Services",
             },
             {
-              q: "Renewals used to be firefighting. With Vendorza Renew, we're planning ahead — with contract, risk and finance context in one view.",
+              q: "Renewals used to be firefighting. With VendorXa Renew, we're planning ahead — with contract, risk and finance context in one view.",
               n: "Julia Bergström",
               r: "Head of Legal Operations",
               c: "Manufacturing",
@@ -235,11 +235,11 @@ function Home() {
         <SectionHeader eyebrow="FAQ" title="Frequently asked questions." />
         <div className="mt-12">
           <FAQ items={[
-            { q: "What is Vendorza?", a: "Vendorza is a vendor lifecycle management platform that unifies onboarding, third-party risk monitoring and renewal management for procurement, legal, finance and security teams." },
-            { q: "Who is Vendorza for?", a: "Mid-market and enterprise organisations in Europe that need consistent, auditable vendor governance across multiple business functions." },
+            { q: "What is VendorXa?", a: "VendorXa is a vendor lifecycle management platform that unifies onboarding, third-party risk monitoring and renewal management for procurement, legal, finance and security teams." },
+            { q: "Who is VendorXa for?", a: "Mid-market and enterprise organisations in Europe that need consistent, auditable vendor governance across multiple business functions." },
             { q: "How does pricing work?", a: "We offer four plans — Essentials, Professional, Business and Enterprise — priced per active vendor with annual billing and no per-seat fees." },
-            { q: "Is my data secure?", a: "Yes. Vendorza is EU-hosted with encryption at rest and in transit, role-based access control, SSO, audit logs and SOC 2 aligned controls." },
-            { q: "Can Vendorza integrate with our existing tools?", a: "Yes — Vendorza integrates with common ERP, procurement, SSO/IdP and document systems, with an API and webhook layer for custom workflows." },
+            { q: "Is my data secure?", a: "Yes. VendorXa is EU-hosted with encryption at rest and in transit, role-based access control, SSO, audit logs and SOC 2 aligned controls." },
+            { q: "Can VendorXa integrate with our existing tools?", a: "Yes — VendorXa integrates with common ERP, procurement, SSO/IdP and document systems, with an API and webhook layer for custom workflows." },
           ]} />
         </div>
       </section>

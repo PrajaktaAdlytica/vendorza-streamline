@@ -6,9 +6,9 @@ import { motion } from "motion/react";
 export const Route = createFileRoute("/products/risk")({
   head: () => ({
     meta: [
-      { title: "Vendorza Risk — Continuous third-party monitoring" },
+      { title: "VendorXa Risk — Continuous third-party monitoring" },
       { name: "description", content: "Continuously assess vendor risk across security, financial, ESG and compliance dimensions." },
-      { property: "og:title", content: "Vendorza Risk — Continuous third-party monitoring" },
+      { property: "og:title", content: "VendorXa Risk — Continuous third-party monitoring" },
       { property: "og:description", content: "Continuously assess vendor risk across security, financial, ESG and compliance dimensions." },
     ],
   }),
@@ -19,7 +19,7 @@ export const Route = createFileRoute("/products/risk")({
       accentText="text-amber-600"
       title="Third-party Risk."
       editorial="Continuous."
-      description="Move beyond point-in-time assessments. Vendorza Risk continuously monitors your vendor ecosystem for security, financial, ESG and compliance signals."
+      description="Move beyond point-in-time assessments. VendorXa Risk continuously monitors your vendor ecosystem for security, financial, ESG and compliance signals."
       rightPanel={<RiskPanel />}
       features={[
         { icon: <ShieldAlert className="h-5 w-5" />, t: "Risk scoring", d: "Composite scores across security, financial, legal and ESG signals." },
@@ -38,7 +38,7 @@ export const Route = createFileRoute("/products/risk")({
         "Report risk posture confidently to the board",
       ]}
       faq={[
-        { q: "What data sources power the risk scores?", a: "Vendorza combines internal signals (questionnaires, contracts, incidents) with external monitoring feeds and financial data providers." },
+        { q: "What data sources power the risk scores?", a: "VendorXa combines internal signals (questionnaires, contracts, incidents) with external monitoring feeds and financial data providers." },
         { q: "Can we bring our own risk framework?", a: "Yes — scoring weights, tiering and control libraries are configurable to match your existing methodology." },
         { q: "How are alerts delivered?", a: "In-app, email, Slack and via webhook — with severity thresholds you control per team." },
       ]}

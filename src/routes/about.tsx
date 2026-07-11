@@ -8,10 +8,10 @@ import { ArrowRight } from "lucide-react";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About — Vendorza" },
-      { name: "description", content: "Vendorza is building the vendor governance layer for modern European organisations." },
-      { property: "og:title", content: "About — Vendorza" },
-      { property: "og:description", content: "Vendorza is building the vendor governance layer for modern European organisations." },
+      { title: "About — VendorXa" },
+      { name: "description", content: "VendorXa is building the vendor governance layer for modern European organisations." },
+      { property: "og:title", content: "About — VendorXa" },
+      { property: "og:description", content: "VendorXa is building the vendor governance layer for modern European organisations." },
     ],
   }),
   component: About,
@@ -21,12 +21,12 @@ function About() {
   return (
     <Shell>
       <section className="mx-auto max-w-4xl px-6 pt-20 pb-16">
-        <Eyebrow>About Vendorza</Eyebrow>
+        <Eyebrow>About VendorXa</Eyebrow>
         <h1 className="mt-4 text-5xl lg:text-6xl font-semibold text-primary tracking-tight leading-[1.02] text-balance">
           Vendor governance, built for the way modern teams actually work.
         </h1>
         <p className="mt-6 text-[17px] text-muted-foreground leading-relaxed max-w-2xl">
-          Vendorza was founded in Warsaw by a team of procurement, legal and security operators who spent years chasing vendor data across a dozen tools. We built the platform we always wished existed — one workspace where onboarding, risk and renewals finally live together.
+          VendorXa was founded in Warsaw by a team of procurement, legal and security operators who spent years chasing vendor data across a dozen tools. We built the platform we always wished existed — one workspace where onboarding, risk and renewals finally live together.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <ButtonLink to="/request-demo" variant="primary" size="lg">Request Demo <ArrowRight className="h-4 w-4" /></ButtonLink>

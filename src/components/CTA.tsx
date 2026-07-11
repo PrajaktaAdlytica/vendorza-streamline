@@ -13,7 +13,7 @@ export function CTA() {
               Ready to modernise your vendor governance?
             </h3>
             <p className="mt-4 text-[15px] text-muted-foreground max-w-md">
-              See how Vendorza helps your teams onboard, assess and manage vendors across the entire lifecycle — with confidence.
+              See how VendorXa helps your teams onboard, assess and manage vendors across the entire lifecycle — with confidence.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <ButtonLink to="/request-demo" variant="primary" size="lg">

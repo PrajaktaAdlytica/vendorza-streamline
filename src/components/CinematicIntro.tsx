@@ -22,6 +22,7 @@ function getActiveStage(currentTime: number) {
 export function CinematicIntro({ onDismissed }: { onDismissed: () => void }) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const exitTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const previousBodyOverflowRef = useRef("");
   const [visible, setVisible] = useState(true);
   const [exiting, setExiting] = useState(false);
   const [paused, setPaused] = useState(false);
@@ -37,6 +38,7 @@ export function CinematicIntro({ onDismissed }: { onDismissed: () => void }) {
     setExiting(true);
     videoRef.current?.pause();
     exitTimerRef.current = setTimeout(() => {
+      document.body.style.overflow = previousBodyOverflowRef.current;
       setVisible(false);
       onDismissed();
       requestAnimationFrame(() => {
@@ -52,6 +54,7 @@ export function CinematicIntro({ onDismissed }: { onDismissed: () => void }) {
     setMotionAllowed(!shouldReduce);
 
     const previousOverflow = document.body.style.overflow;
+    previousBodyOverflowRef.current = previousOverflow;
     document.body.style.overflow = "hidden";
 
     return () => {

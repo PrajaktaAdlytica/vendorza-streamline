@@ -9,7 +9,11 @@ export const Route = createFileRoute("/request-demo")({
   head: () => ({
     meta: [
       { title: "Request a Demo — VendorXa" },
-      { name: "description", content: "See how VendorXa can help your teams onboard, assess and manage vendors with confidence." },
+      {
+        name: "description",
+        content:
+          "See how VendorXa can help your teams onboard, assess and manage vendors with confidence.",
+      },
     ],
   }),
   component: RequestDemo,
@@ -27,12 +31,19 @@ function RequestDemo() {
   return (
     <div className="min-h-screen grid lg:grid-cols-2">
       <div className="relative hidden lg:flex flex-col bg-primary text-primary-foreground p-10 overflow-hidden">
-        <div className="absolute inset-0 opacity-40" style={{
-          backgroundImage: "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0)",
-          backgroundSize: "22px 22px",
-        }} />
+        <div
+          className="absolute inset-0 opacity-40"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0)",
+            backgroundSize: "22px 22px",
+          }}
+        />
         <div className="absolute -right-40 -bottom-40 h-96 w-96 rounded-full bg-accent/20 blur-3xl" />
-        <Link to="/" className="relative text-primary-foreground [&_span]:text-white [&_svg]:text-white">
+        <Link
+          to="/"
+          className="relative text-primary-foreground [&_span]:text-white [&_svg]:text-white"
+        >
           <Logo />
         </Link>
         <div className="relative mt-auto max-w-md">
@@ -62,7 +73,11 @@ function RequestDemo() {
           transition={{ duration: 0.5 }}
           className="w-full max-w-md"
         >
-          <div className="lg:hidden mb-8"><Link to="/"><Logo /></Link></div>
+          <div className="lg:hidden mb-8">
+            <Link to="/">
+              <Logo />
+            </Link>
+          </div>
           <h1 className="text-3xl font-semibold text-primary tracking-tight">Request Demo</h1>
           <p className="mt-1.5 text-sm text-muted-foreground">
             Fill in a few details and we'll be in touch within one business day.
@@ -81,17 +96,30 @@ function RequestDemo() {
           ) : (
             <form
               className="mt-8 space-y-4"
-              onSubmit={(e) => { e.preventDefault(); setSent(true); }}
+              onSubmit={(e) => {
+                e.preventDefault();
+                setSent(true);
+              }}
             >
               <div className="grid grid-cols-2 gap-3">
-                <Field label="First name"><input required className="input" /></Field>
-                <Field label="Last name"><input required className="input" /></Field>
+                <Field label="First name">
+                  <input required className="input" />
+                </Field>
+                <Field label="Last name">
+                  <input required className="input" />
+                </Field>
               </div>
-              <Field label="Work email"><input required type="email" className="input" placeholder="you@company.com" /></Field>
-              <Field label="Company"><input required className="input" /></Field>
+              <Field label="Work email">
+                <input required type="email" className="input" placeholder="you@company.com" />
+              </Field>
+              <Field label="Company">
+                <input required className="input" />
+              </Field>
               <Field label="Team">
                 <select className="input" defaultValue="">
-                  <option value="" disabled>Select your team</option>
+                  <option value="" disabled>
+                    Select your team
+                  </option>
                   <option>Procurement</option>
                   <option>Legal</option>
                   <option>Finance</option>
@@ -106,7 +134,8 @@ function RequestDemo() {
                 Request Demo <ArrowRight className="h-4 w-4" />
               </Button>
               <p className="text-[11px] text-muted-foreground text-center">
-                By submitting, you agree to VendorXa processing your data as described in our Privacy Policy.
+                By submitting, you agree to VendorXa processing your data as described in our
+                Privacy Policy.
               </p>
             </form>
           )}

@@ -20,7 +20,12 @@ const plans = [
     name: "Business",
     price: "€349",
     desc: "For mid-sized organisations that need scale and automation.",
-    features: ["Up to 1,000 vendors", "Advanced risk & compliance", "ESG tracking", "SSO & role permissions"],
+    features: [
+      "Up to 1,000 vendors",
+      "Advanced risk & compliance",
+      "ESG tracking",
+      "SSO & role permissions",
+    ],
     cta: "Get Started",
     featured: true,
   },
@@ -28,7 +33,12 @@ const plans = [
     name: "Enterprise",
     price: "Custom",
     desc: "For large organisations with complex requirements.",
-    features: ["Unlimited vendors", "Custom integrations", "Dedicated success manager", "SLA & premium support"],
+    features: [
+      "Unlimited vendors",
+      "Custom integrations",
+      "Dedicated success manager",
+      "SLA & premium support",
+    ],
     cta: "Contact Sales",
   },
 ];
@@ -40,7 +50,9 @@ export function Pricing() {
         <div
           key={p.name}
           className={`surface-card card-hover p-6 flex flex-col relative ${
-            p.featured ? "ring-2 ring-accent shadow-[0_30px_60px_-30px_color-mix(in_oklab,var(--accent)_50%,transparent)]" : ""
+            p.featured
+              ? "ring-2 ring-accent shadow-[0_30px_60px_-30px_color-mix(in_oklab,var(--accent)_50%,transparent)]"
+              : ""
           }`}
         >
           {p.featured && (
@@ -49,10 +61,14 @@ export function Pricing() {
             </span>
           )}
           <div className="text-sm font-semibold text-primary">{p.name}</div>
-          <p className="mt-2 text-xs text-muted-foreground leading-relaxed min-h-[42px]">{p.desc}</p>
+          <p className="mt-2 text-xs text-muted-foreground leading-relaxed min-h-[42px]">
+            {p.desc}
+          </p>
           <div className="mt-5">
             <span className="text-4xl font-semibold text-primary tracking-tight">{p.price}</span>
-            {p.price !== "Custom" && <span className="text-sm text-muted-foreground ml-1">/month</span>}
+            {p.price !== "Custom" && (
+              <span className="text-sm text-muted-foreground ml-1">/month</span>
+            )}
           </div>
           <div className="text-[11px] text-muted-foreground mt-1">
             {p.price === "Custom" ? "Contact us for pricing" : "Billed annually"}

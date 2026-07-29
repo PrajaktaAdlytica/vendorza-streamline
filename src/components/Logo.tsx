@@ -28,9 +28,7 @@ export function Logo({ className = "h-8 w-auto" }: { className?: string }) {
         <circle cx="14.5" cy="29.5" r="2.6" fill="#F8FAFC" stroke="#0B1220" strokeWidth="1.5" />
         <circle cx="29.5" cy="29.5" r="2.6" fill="#14B8A6" stroke="#0B1220" strokeWidth="1.5" />
       </svg>
-      <span className="text-[1.25rem] font-semibold tracking-tight text-primary">
-        VendorXa
-      </span>
+      <span className="text-[1.25rem] font-semibold tracking-tight text-primary">VendorXa</span>
     </div>
   );
 }

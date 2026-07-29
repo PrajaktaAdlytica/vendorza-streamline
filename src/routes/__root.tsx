@@ -44,15 +44,16 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-dotted px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-primary">
-          This page didn't load
-        </h1>
+        <h1 className="text-xl font-semibold tracking-tight text-primary">This page didn't load</h1>
         <p className="mt-2 text-sm text-muted-foreground">
           Something went wrong on our end. You can try refreshing or head back home.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-2">
           <button
-            onClick={() => { router.invalidate(); reset(); }}
+            onClick={() => {
+              router.invalidate();
+              reset();
+            }}
             className="inline-flex items-center justify-center rounded-lg bg-accent px-5 py-2.5 text-sm font-medium text-accent-foreground hover:bg-accent/90"
           >
             Try again
@@ -70,7 +71,8 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 }
 
 const TITLE = "VendorXa — Vendor Lifecycle Governance. Finally in One Place.";
-const DESC = "VendorXa centralises vendor onboarding, third-party risk and contract renewals into one intelligent workspace for procurement, legal, finance and security teams.";
+const DESC =
+  "VendorXa centralises vendor onboarding, third-party risk and contract renewals into one intelligent workspace for procurement, legal, finance and security teams.";
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
@@ -90,11 +92,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { title: "VendorXa" },
       { property: "og:title", content: "VendorXa" },
       { name: "twitter:title", content: "VendorXa" },
-      { name: "description", content: "VendorXa centralizes vendor onboarding, risk, and renewals into one intelligent workspace." },
-      { property: "og:description", content: "VendorXa centralizes vendor onboarding, risk, and renewals into one intelligent workspace." },
-      { name: "twitter:description", content: "VendorXa centralizes vendor onboarding, risk, and renewals into one intelligent workspace." },
-      { property: "og:image", content: "https://vendorza-streamline.vercel.app/favicon.svg?v=vendorxa" },
-      { name: "twitter:image", content: "https://vendorza-streamline.vercel.app/favicon.svg?v=vendorxa" },
+      {
+        name: "description",
+        content:
+          "VendorXa centralizes vendor onboarding, risk, and renewals into one intelligent workspace.",
+      },
+      {
+        property: "og:description",
+        content:
+          "VendorXa centralizes vendor onboarding, risk, and renewals into one intelligent workspace.",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "VendorXa centralizes vendor onboarding, risk, and renewals into one intelligent workspace.",
+      },
+      {
+        property: "og:image",
+        content: "https://vendorza-streamline.vercel.app/favicon.svg?v=vendorxa",
+      },
+      {
+        name: "twitter:image",
+        content: "https://vendorza-streamline.vercel.app/favicon.svg?v=vendorxa",
+      },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

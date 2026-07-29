@@ -1,5 +1,16 @@
 const logos = [
-  "ORLEN", "Żabka", "Allegro", "Bank Polski", "PZU", "Deloitte", "ING", "KGHM", "EY", "Santander", "Play", "Lotos",
+  "ORLEN",
+  "Żabka",
+  "Allegro",
+  "Bank Polski",
+  "PZU",
+  "Deloitte",
+  "ING",
+  "KGHM",
+  "EY",
+  "Santander",
+  "Play",
+  "Lotos",
 ];
 
 export function TrustedBy() {

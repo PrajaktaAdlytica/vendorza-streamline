@@ -6,7 +6,12 @@ const steps = [
   { icon: ShieldCheck, label: "Security Review", sub: "Completed", state: "done" as const },
   { icon: Scale, label: "Legal Review", sub: "Completed", state: "done" as const },
   { icon: Wallet, label: "Finance Approval", sub: "Completed", state: "done" as const },
-  { icon: BadgeCheck, label: "Vendor Approved", sub: "Onboarding complete", state: "final" as const },
+  {
+    icon: BadgeCheck,
+    label: "Vendor Approved",
+    sub: "Onboarding complete",
+    state: "final" as const,
+  },
 ];
 
 export function HeroWorkflow() {
@@ -21,7 +26,9 @@ export function HeroWorkflow() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 + i * 0.35, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className={`surface-card card-hover flex items-center gap-3 p-3.5 pr-4 ${
-                s.state === "final" ? "ring-1 ring-accent/50 shadow-[0_20px_60px_-25px_color-mix(in_oklab,var(--accent)_60%,transparent)]" : ""
+                s.state === "final"
+                  ? "ring-1 ring-accent/50 shadow-[0_20px_60px_-25px_color-mix(in_oklab,var(--accent)_60%,transparent)]"
+                  : ""
               }`}
             >
               <div
@@ -37,7 +44,12 @@ export function HeroWorkflow() {
                   <motion.span
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    transition={{ delay: 0.55 + i * 0.35, type: "spring", stiffness: 260, damping: 18 }}
+                    transition={{
+                      delay: 0.55 + i * 0.35,
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 18,
+                    }}
                   >
                     <Check className="h-5 w-5" strokeWidth={3} />
                   </motion.span>

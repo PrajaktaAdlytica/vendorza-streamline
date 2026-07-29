@@ -49,23 +49,47 @@ export function Footer() {
               Vendor governance for procurement, legal, finance and security teams across Europe.
             </p>
             <div className="mt-6 flex gap-2">
-              <a href="#" className="p-2 rounded-lg border border-border hover:border-accent/60 hover:text-accent transition-colors" aria-label="LinkedIn">
+              <a
+                href="#"
+                className="p-2 rounded-lg border border-border hover:border-accent/60 hover:text-accent transition-colors"
+                aria-label="LinkedIn"
+              >
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="#" className="p-2 rounded-lg border border-border hover:border-accent/60 hover:text-accent transition-colors" aria-label="Twitter">
+              <a
+                href="#"
+                className="p-2 rounded-lg border border-border hover:border-accent/60 hover:text-accent transition-colors"
+                aria-label="Twitter"
+              >
                 <Twitter className="h-4 w-4" />
               </a>
             </div>
           </div>
           {cols.map((col) => (
             <div key={col.title}>
-              <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">{col.title}</div>
+              <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                {col.title}
+              </div>
               <ul className="mt-4 space-y-2.5 text-sm">
                 {col.links.map((l) =>
                   "to" in l ? (
-                    <li key={l.label}><Link to={l.to} className="text-primary/80 hover:text-accent transition-colors">{l.label}</Link></li>
+                    <li key={l.label}>
+                      <Link
+                        to={l.to}
+                        className="text-primary/80 hover:text-accent transition-colors"
+                      >
+                        {l.label}
+                      </Link>
+                    </li>
                   ) : (
-                    <li key={l.label}><a href={l.href} className="text-primary/80 hover:text-accent transition-colors">{l.label}</a></li>
+                    <li key={l.label}>
+                      <a
+                        href={l.href}
+                        className="text-primary/80 hover:text-accent transition-colors"
+                      >
+                        {l.label}
+                      </a>
+                    </li>
                   ),
                 )}
               </ul>

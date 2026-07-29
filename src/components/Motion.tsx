@@ -1,7 +1,15 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "motion/react";
 
-export function CountUp({ to, suffix = "", duration = 1.4 }: { to: number; suffix?: string; duration?: number }) {
+export function CountUp({
+  to,
+  suffix = "",
+  duration = 1.4,
+}: {
+  to: number;
+  suffix?: string;
+  duration?: number;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
   const [n, setN] = useState(0);
@@ -18,7 +26,12 @@ export function CountUp({ to, suffix = "", duration = 1.4 }: { to: number; suffi
     raf = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(raf);
   }, [inView, to, duration]);
-  return <span ref={ref}>{n.toLocaleString()}{suffix}</span>;
+  return (
+    <span ref={ref}>
+      {n.toLocaleString()}
+      {suffix}
+    </span>
+  );
 }
 
 export function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {

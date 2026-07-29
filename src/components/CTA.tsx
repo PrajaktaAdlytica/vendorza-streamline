@@ -13,7 +13,8 @@ export function CTA() {
               Ready to modernise your vendor governance?
             </h3>
             <p className="mt-4 text-[15px] text-muted-foreground max-w-md">
-              See how VendorXa helps your teams onboard, assess and manage vendors across the entire lifecycle — with confidence.
+              See how VendorXa helps your teams onboard, assess and manage vendors across the entire
+              lifecycle — with confidence.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <ButtonLink to="/request-demo" variant="primary" size="lg">
@@ -38,9 +39,14 @@ function MiniPreview() {
     <div className="relative">
       <div className="surface-card p-4 space-y-2">
         {["TechWave Solutions", "DataSecure Sp. z o.o.", "GreenPack Europe"].map((v, i) => (
-          <div key={v} className="flex items-center justify-between px-3 py-2.5 rounded-lg border border-border/70 bg-background/50">
+          <div
+            key={v}
+            className="flex items-center justify-between px-3 py-2.5 rounded-lg border border-border/70 bg-background/50"
+          >
             <div className="text-xs font-medium text-primary">{v}</div>
-            <span className={`text-[10px] font-medium px-2 py-0.5 rounded ${i === 1 ? "bg-amber-50 text-amber-700" : "bg-emerald-50 text-emerald-700"}`}>
+            <span
+              className={`text-[10px] font-medium px-2 py-0.5 rounded ${i === 1 ? "bg-amber-50 text-amber-700" : "bg-emerald-50 text-emerald-700"}`}
+            >
               {i === 1 ? "Review" : "Active"}
             </span>
           </div>

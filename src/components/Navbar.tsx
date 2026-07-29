@@ -27,9 +27,7 @@ export function Navbar() {
     <header
       className={cn(
         "sticky top-0 z-50 w-full transition-all duration-300",
-        scrolled
-          ? "backdrop-blur-xl bg-background/70 border-b border-border"
-          : "bg-transparent",
+        scrolled ? "backdrop-blur-xl bg-background/70 border-b border-border" : "bg-transparent",
       )}
     >
       <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6">
@@ -43,18 +41,34 @@ export function Navbar() {
             className="relative"
             onMouseEnter={() => setProductsOpen(true)}
             onMouseLeave={() => setProductsOpen(false)}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget)) setProductsOpen(false);
+            }}
           >
-            <button className="inline-flex items-center gap-1 px-3 py-2 rounded-md text-primary/80 hover:text-primary transition-colors">
+            <button
+              type="button"
+              aria-haspopup="menu"
+              aria-expanded={productsOpen}
+              onClick={() => setProductsOpen(true)}
+              onKeyDown={(event) => {
+                if (event.key === "Escape") {
+                  setProductsOpen(false);
+                  event.currentTarget.focus();
+                }
+              }}
+              className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-primary/80 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
+            >
               Products <ChevronDown className="h-3.5 w-3.5" />
             </button>
             {productsOpen && (
               <div className="absolute left-0 top-full pt-2 w-[320px]">
-                <div className="surface-card p-2 shadow-xl">
+                <div className="surface-card p-2 shadow-xl" role="menu">
                   {products.map((p) => (
                     <Link
                       key={p.to}
                       to={p.to}
-                      className="block rounded-lg px-3 py-2.5 hover:bg-secondary transition-colors"
+                      role="menuitem"
+                      className="block rounded-lg px-3 py-2.5 transition-colors hover:bg-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
                     >
                       <div className="text-sm font-medium text-primary">{p.name}</div>
                       <div className="text-xs text-muted-foreground mt-0.5">{p.desc}</div>
@@ -70,14 +84,19 @@ export function Navbar() {
         </div>
 
         <div className="hidden lg:flex items-center gap-2">
-          <ButtonLink to="/signin" variant="ghost" size="sm">Sign In</ButtonLink>
-          <ButtonLink to="/request-demo" variant="primary" size="sm">Request Demo</ButtonLink>
+          <ButtonLink to="/signin" variant="ghost" size="sm">
+            Sign In
+          </ButtonLink>
+          <ButtonLink to="/request-demo" variant="primary" size="sm">
+            Request Demo
+          </ButtonLink>
         </div>
 
         <button
-          className="lg:hidden p-2 -mr-2 text-primary"
+          className="-mr-2 p-2 text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40 lg:hidden"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
+          aria-expanded={open}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
         </button>
@@ -86,18 +105,38 @@ export function Navbar() {
       {open && (
         <div className="lg:hidden border-t border-border bg-background/95 backdrop-blur">
           <div className="px-6 py-4 space-y-1">
-            <MobileLink to="/" onClick={() => setOpen(false)}>Home</MobileLink>
+            <MobileLink to="/" onClick={() => setOpen(false)}>
+              Home
+            </MobileLink>
             {products.map((p) => (
               <MobileLink key={p.to} to={p.to} onClick={() => setOpen(false)}>
                 {p.name}
               </MobileLink>
             ))}
-            <a href="/#solutions" onClick={() => setOpen(false)} className="block py-2.5 text-primary">Solutions</a>
-            <a href="/#pricing" onClick={() => setOpen(false)} className="block py-2.5 text-primary">Pricing</a>
-            <MobileLink to="/about" onClick={() => setOpen(false)}>About</MobileLink>
+            <a
+              href="/#solutions"
+              onClick={() => setOpen(false)}
+              className="block py-2.5 text-primary"
+            >
+              Solutions
+            </a>
+            <a
+              href="/#pricing"
+              onClick={() => setOpen(false)}
+              className="block py-2.5 text-primary"
+            >
+              Pricing
+            </a>
+            <MobileLink to="/about" onClick={() => setOpen(false)}>
+              About
+            </MobileLink>
             <div className="pt-3 flex gap-2">
-              <ButtonLink to="/signin" variant="outline" size="sm" className="flex-1">Sign In</ButtonLink>
-              <ButtonLink to="/request-demo" variant="primary" size="sm" className="flex-1">Request Demo</ButtonLink>
+              <ButtonLink to="/signin" variant="outline" size="sm" className="flex-1">
+                Sign In
+              </ButtonLink>
+              <ButtonLink to="/request-demo" variant="primary" size="sm" className="flex-1">
+                Request Demo
+              </ButtonLink>
             </div>
           </div>
         </div>
@@ -119,12 +158,23 @@ function NavLink({ to, children }: { to: string; children: React.ReactNode }) {
 }
 function NavAnchor({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <a href={href} className="px-3 py-2 rounded-md text-primary/80 hover:text-primary transition-colors">
+    <a
+      href={href}
+      className="px-3 py-2 rounded-md text-primary/80 hover:text-primary transition-colors"
+    >
       {children}
     </a>
   );
 }
-function MobileLink({ to, children, onClick }: { to: string; children: React.ReactNode; onClick: () => void }) {
+function MobileLink({
+  to,
+  children,
+  onClick,
+}: {
+  to: string;
+  children: React.ReactNode;
+  onClick: () => void;
+}) {
   return (
     <Link to={to} onClick={onClick} className="block py-2.5 text-primary">
       {children}

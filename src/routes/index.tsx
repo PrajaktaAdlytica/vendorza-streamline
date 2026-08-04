@@ -24,6 +24,7 @@ import { CTA } from "@/components/CTA";
 import { RoleSolutions } from "@/components/RoleSolutions";
 import { GuidedTour } from "@/components/GuidedTour";
 import { CinematicIntro } from "@/components/CinematicIntro";
+import { FundingAnnouncement } from "@/components/FundingAnnouncement";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -95,6 +96,8 @@ function Home() {
           </section>
 
           <TrustedBy />
+
+          <FundingAnnouncement />
 
           {/* PROBLEM */}
           <section className="mx-auto max-w-7xl px-6 py-24">

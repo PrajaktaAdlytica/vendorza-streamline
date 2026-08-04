@@ -3,7 +3,7 @@ import { Shell } from "@/components/Shell";
 import { SectionHeader, Eyebrow } from "@/components/SectionHeader";
 import { CTA } from "@/components/CTA";
 import { ButtonLink } from "@/components/Button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowUpRight } from "lucide-react";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -45,6 +45,39 @@ function About() {
           <ButtonLink to="/products/onboard" variant="outline" size="lg">
             Explore Products
           </ButtonLink>
+        </div>
+      </section>
+
+      <section aria-labelledby="credibility-record-title" className="mx-auto max-w-7xl px-6 py-10">
+        <div className="surface-card p-7 sm:p-8">
+          <div className="grid gap-7 lg:grid-cols-[1fr_auto] lg:items-center">
+            <div>
+              <Eyebrow>Company record</Eyebrow>
+              <h2
+                id="credibility-record-title"
+                className="mt-3 text-2xl font-semibold tracking-tight text-primary"
+              >
+                Backed by Dlabs <span className="font-editorial text-accent">· $495K funding</span>
+              </h2>
+            </div>
+            <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium">
+              {[
+                { label: "Dlabs portfolio", href: "https://d-labs-site.vercel.app/companies" },
+                { label: "LinkedIn", href: "https://www.linkedin.com/company/vendorxa/" },
+                { label: "Crunchbase", href: "https://www.crunchbase.com/organization/vendorxa" },
+              ].map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="inline-flex min-h-10 items-center gap-1.5 rounded-md text-primary transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
+                >
+                  {link.label} <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+                </a>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 

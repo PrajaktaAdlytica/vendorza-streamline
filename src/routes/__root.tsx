@@ -74,6 +74,17 @@ const TITLE = "VendorXa — Vendor Lifecycle Governance. Finally in One Place.";
 const DESC =
   "VendorXa centralises vendor onboarding, third-party risk and contract renewals into one intelligent workspace for procurement, legal, finance and security teams.";
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Vendorxa",
+  url: "https://vendorxa.com",
+  sameAs: [
+    "https://www.linkedin.com/company/vendorxa/",
+    "https://www.crunchbase.com/organization/vendorxa",
+  ],
+};
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -140,6 +151,10 @@ function RootShell({ children }: { children: ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
         {children}
         <Scripts />
       </body>

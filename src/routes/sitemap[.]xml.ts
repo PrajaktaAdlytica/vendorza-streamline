@@ -13,6 +13,7 @@ export const Route = createFileRoute("/sitemap.xml")({
           "/products/risk",
           "/products/renew",
           "/about",
+          "/news/funding-announcement",
           "/signin",
           "/request-demo",
         ];

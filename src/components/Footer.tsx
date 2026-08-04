@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { Logo } from "./Logo";
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 const cols = [
   {
@@ -24,6 +24,7 @@ const cols = [
     title: "Company",
     links: [
       { label: "About", to: "/about" },
+      { label: "Funding", to: "/news/funding-announcement" },
       { label: "Careers", href: "#" },
       { label: "Contact", href: "#" },
     ],
@@ -50,18 +51,13 @@ export function Footer() {
             </p>
             <div className="mt-6 flex gap-2">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/vendorxa/"
+                target="_blank"
+                rel="noreferrer noopener"
                 className="p-2 rounded-lg border border-border hover:border-accent/60 hover:text-accent transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="h-4 w-4" />
-              </a>
-              <a
-                href="#"
-                className="p-2 rounded-lg border border-border hover:border-accent/60 hover:text-accent transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter className="h-4 w-4" />
               </a>
             </div>
           </div>

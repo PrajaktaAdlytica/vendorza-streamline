@@ -9,28 +9,19 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
-import { Route as IndexRouteImport } from './routes/index'
-import { Route as AboutRouteImport } from './routes/about'
-import { Route as RequestDemoRouteImport } from './routes/request-demo'
-import { Route as SigninRouteImport } from './routes/signin'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
-import { Route as ProductsOnboardRouteImport } from './routes/products.onboard'
-import { Route as ProductsRenewRouteImport } from './routes/products.renew'
+import { Route as SigninRouteImport } from './routes/signin'
+import { Route as RequestDemoRouteImport } from './routes/request-demo'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as IndexRouteImport } from './routes/index'
 import { Route as ProductsRiskRouteImport } from './routes/products.risk'
+import { Route as ProductsRenewRouteImport } from './routes/products.renew'
+import { Route as ProductsOnboardRouteImport } from './routes/products.onboard'
+import { Route as NewsFundingAnnouncementRouteImport } from './routes/news.funding-announcement'
 
-const IndexRoute = IndexRouteImport.update({
-  id: '/',
-  path: '/',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const AboutRoute = AboutRouteImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const RequestDemoRoute = RequestDemoRouteImport.update({
-  id: '/request-demo',
-  path: '/request-demo',
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SigninRoute = SigninRouteImport.update({
@@ -38,14 +29,24 @@ const SigninRoute = SigninRouteImport.update({
   path: '/signin',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
-  id: '/sitemap.xml',
-  path: '/sitemap.xml',
+const RequestDemoRoute = RequestDemoRouteImport.update({
+  id: '/request-demo',
+  path: '/request-demo',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProductsOnboardRoute = ProductsOnboardRouteImport.update({
-  id: '/products/onboard',
-  path: '/products/onboard',
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IndexRoute = IndexRouteImport.update({
+  id: '/',
+  path: '/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ProductsRiskRoute = ProductsRiskRouteImport.update({
+  id: '/products/risk',
+  path: '/products/risk',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProductsRenewRoute = ProductsRenewRouteImport.update({
@@ -53,9 +54,14 @@ const ProductsRenewRoute = ProductsRenewRouteImport.update({
   path: '/products/renew',
   getParentRoute: () => rootRouteImport,
 } as any)
-const ProductsRiskRoute = ProductsRiskRouteImport.update({
-  id: '/products/risk',
-  path: '/products/risk',
+const ProductsOnboardRoute = ProductsOnboardRouteImport.update({
+  id: '/products/onboard',
+  path: '/products/onboard',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const NewsFundingAnnouncementRoute = NewsFundingAnnouncementRouteImport.update({
+  id: '/news/funding-announcement',
+  path: '/news/funding-announcement',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/request-demo': typeof RequestDemoRoute
   '/signin': typeof SigninRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/news/funding-announcement': typeof NewsFundingAnnouncementRoute
   '/products/onboard': typeof ProductsOnboardRoute
   '/products/renew': typeof ProductsRenewRoute
   '/products/risk': typeof ProductsRiskRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/request-demo': typeof RequestDemoRoute
   '/signin': typeof SigninRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/news/funding-announcement': typeof NewsFundingAnnouncementRoute
   '/products/onboard': typeof ProductsOnboardRoute
   '/products/renew': typeof ProductsRenewRoute
   '/products/risk': typeof ProductsRiskRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/request-demo': typeof RequestDemoRoute
   '/signin': typeof SigninRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
+  '/news/funding-announcement': typeof NewsFundingAnnouncementRoute
   '/products/onboard': typeof ProductsOnboardRoute
   '/products/renew': typeof ProductsRenewRoute
   '/products/risk': typeof ProductsRiskRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/request-demo'
     | '/signin'
     | '/sitemap.xml'
+    | '/news/funding-announcement'
     | '/products/onboard'
     | '/products/renew'
     | '/products/risk'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/request-demo'
     | '/signin'
     | '/sitemap.xml'
+    | '/news/funding-announcement'
     | '/products/onboard'
     | '/products/renew'
     | '/products/risk'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/request-demo'
     | '/signin'
     | '/sitemap.xml'
+    | '/news/funding-announcement'
     | '/products/onboard'
     | '/products/renew'
     | '/products/risk'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   RequestDemoRoute: typeof RequestDemoRoute
   SigninRoute: typeof SigninRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
+  NewsFundingAnnouncementRoute: typeof NewsFundingAnnouncementRoute
   ProductsOnboardRoute: typeof ProductsOnboardRoute
   ProductsRenewRoute: typeof ProductsRenewRoute
   ProductsRiskRoute: typeof ProductsRiskRoute
@@ -136,25 +149,11 @@ export interface RootRouteChildren {
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
-    '/': {
-      id: '/'
-      path: '/'
-      fullPath: '/'
-      preLoaderRoute: typeof IndexRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/about': {
-      id: '/about'
-      path: '/about'
-      fullPath: '/about'
-      preLoaderRoute: typeof AboutRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/request-demo': {
-      id: '/request-demo'
-      path: '/request-demo'
-      fullPath: '/request-demo'
-      preLoaderRoute: typeof RequestDemoRouteImport
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/signin': {
@@ -164,18 +163,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SigninRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/sitemap.xml': {
-      id: '/sitemap.xml'
-      path: '/sitemap.xml'
-      fullPath: '/sitemap.xml'
-      preLoaderRoute: typeof SitemapDotxmlRouteImport
+    '/request-demo': {
+      id: '/request-demo'
+      path: '/request-demo'
+      fullPath: '/request-demo'
+      preLoaderRoute: typeof RequestDemoRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/products/onboard': {
-      id: '/products/onboard'
-      path: '/products/onboard'
-      fullPath: '/products/onboard'
-      preLoaderRoute: typeof ProductsOnboardRouteImport
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/': {
+      id: '/'
+      path: '/'
+      fullPath: '/'
+      preLoaderRoute: typeof IndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/products/risk': {
+      id: '/products/risk'
+      path: '/products/risk'
+      fullPath: '/products/risk'
+      preLoaderRoute: typeof ProductsRiskRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/products/renew': {
@@ -185,11 +198,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ProductsRenewRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/products/risk': {
-      id: '/products/risk'
-      path: '/products/risk'
-      fullPath: '/products/risk'
-      preLoaderRoute: typeof ProductsRiskRouteImport
+    '/products/onboard': {
+      id: '/products/onboard'
+      path: '/products/onboard'
+      fullPath: '/products/onboard'
+      preLoaderRoute: typeof ProductsOnboardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/news/funding-announcement': {
+      id: '/news/funding-announcement'
+      path: '/news/funding-announcement'
+      fullPath: '/news/funding-announcement'
+      preLoaderRoute: typeof NewsFundingAnnouncementRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   RequestDemoRoute: RequestDemoRoute,
   SigninRoute: SigninRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
+  NewsFundingAnnouncementRoute: NewsFundingAnnouncementRoute,
   ProductsOnboardRoute: ProductsOnboardRoute,
   ProductsRenewRoute: ProductsRenewRoute,
   ProductsRiskRoute: ProductsRiskRoute,

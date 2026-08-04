@@ -80,6 +80,7 @@ export function Navbar() {
           </div>
           <NavAnchor href="/#solutions">Solutions</NavAnchor>
           <NavAnchor href="/#pricing">Pricing</NavAnchor>
+          <NavLink to="/news/funding-announcement">Funding</NavLink>
           <NavLink to="/about">About</NavLink>
         </div>
 
@@ -127,6 +128,9 @@ export function Navbar() {
             >
               Pricing
             </a>
+            <MobileLink to="/news/funding-announcement" onClick={() => setOpen(false)}>
+              Funding announcement
+            </MobileLink>
             <MobileLink to="/about" onClick={() => setOpen(false)}>
               About
             </MobileLink>

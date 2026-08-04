@@ -59,6 +59,9 @@ function About() {
               >
                 Backed by Dlabs <span className="font-editorial text-accent">· $495K funding</span>
               </h2>
+              <p className="mt-2 text-sm text-muted-foreground">
+                Announced <time dateTime="2026-01-28">Jan 28, 2026</time>
+              </p>
             </div>
             <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm font-medium">
               {[

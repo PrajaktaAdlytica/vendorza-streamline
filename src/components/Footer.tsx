@@ -24,7 +24,7 @@ const cols = [
     title: "Company",
     links: [
       { label: "About", to: "/about" },
-      { label: "Funding", to: "/news/funding-announcement" },
+      { label: "Funding announcement", to: "/news/funding-announcement" },
       { label: "Careers", href: "#" },
       { label: "Contact", href: "#" },
     ],

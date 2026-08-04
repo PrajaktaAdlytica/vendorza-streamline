@@ -5,6 +5,8 @@ import { ButtonLink } from "@/components/Button";
 import { Eyebrow } from "@/components/SectionHeader";
 
 const DLABS_PORTFOLIO_URL = "https://d-labs-site.vercel.app/companies";
+const LINKEDIN_URL = "https://www.linkedin.com/company/vendorxa/";
+const CRUNCHBASE_URL = "https://www.crunchbase.com/organization/vendorxa";
 const TITLE = "Vendorxa secures $495K in funding from Dlabs.";
 const DESCRIPTION =
   "Vendorxa is part of Dlabs’ global portfolio of companies building vendor risk for complex operating environments.";
@@ -73,7 +75,7 @@ function FundingArticle() {
               <p className="max-w-2xl text-[15px] leading-relaxed text-primary/85">
                 Vendorxa has secured $495K in funding from Dlabs.
               </p>
-              <div className="mt-7">
+              <div className="mt-7 flex flex-wrap items-center gap-3">
                 <ButtonLink
                   href={DLABS_PORTFOLIO_URL}
                   target="_blank"
@@ -83,6 +85,20 @@ function FundingArticle() {
                 >
                   View Dlabs portfolio <ArrowUpRight className="h-4 w-4" aria-hidden />
                 </ButtonLink>
+                {[
+                  { label: "LinkedIn", href: LINKEDIN_URL },
+                  { label: "Crunchbase", href: CRUNCHBASE_URL },
+                ].map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    className="inline-flex min-h-10 items-center gap-1.5 rounded-md px-2 text-sm font-medium text-primary transition-colors hover:text-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40"
+                  >
+                    {link.label} <ArrowUpRight className="h-3.5 w-3.5" aria-hidden />
+                  </a>
+                ))}
               </div>
             </div>
           </div>
